@@ -1,9 +1,7 @@
 package com.jobgenie.myjobapp.jobs;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.jobgenie.myjobapp.companies.Companies;
+import jakarta.persistence.*;
 
 @Entity
 public class Jobs {
@@ -16,7 +14,16 @@ public class Jobs {
     private String location;
     private String maxSalary;
     private String minSalary;
+    @ManyToOne
+    private Companies company;
 
+    public Companies getCompany() {
+        return company;
+    }
+
+    public void setCompany(Companies company) {
+        this.company = company;
+    }
 
     public Jobs(Long id, String title, String description, String organization, String location, String maxSalary, String minSalary) {
         this.id = id;

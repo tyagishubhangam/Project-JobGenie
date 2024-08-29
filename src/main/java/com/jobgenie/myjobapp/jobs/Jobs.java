@@ -1,6 +1,14 @@
 package com.jobgenie.myjobapp.jobs;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Jobs {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
     private String description;
@@ -8,6 +16,7 @@ public class Jobs {
     private String location;
     private String maxSalary;
     private String minSalary;
+
 
     public Jobs(Long id, String title, String description, String organization, String location, String maxSalary, String minSalary) {
         this.id = id;

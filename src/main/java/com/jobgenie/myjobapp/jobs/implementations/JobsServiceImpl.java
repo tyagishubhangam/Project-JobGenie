@@ -44,7 +44,7 @@ public class JobsServiceImpl implements JobsService {
                 Jobs job = jobOpt.get();
                 job.setTitle(updatedJob.getTitle());
                 job.setDescription(updatedJob.getDescription());
-                job.setOrganisation(updatedJob.getOrganisation());
+
                 job.setMinSalary(updatedJob.getMinSalary());
                 job.setMaxSalary(updatedJob.getMaxSalary());
                 job.setLocation(updatedJob.getLocation());

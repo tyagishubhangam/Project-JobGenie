@@ -10,7 +10,6 @@ public class Jobs {
     private Long id;
     private String title;
     private String description;
-    private String organisation;
     private String location;
     private String maxSalary;
     private String minSalary;
@@ -25,25 +24,16 @@ public class Jobs {
         this.company = company;
     }
 
-    public Jobs(Long id, String title, String description, String organization, String location, String maxSalary, String minSalary) {
+    public Jobs(Long id, String title, String description, String location, String maxSalary, String minSalary) {
         this.id = id;
         this.title = title;
         this.description = description;
-        this.organisation = organization;
         this.location = location;
         this.maxSalary = maxSalary;
         this.minSalary = minSalary;
     }
     public Jobs(){}
 
-
-    public String getOrganisation() {
-        return organisation;
-    }
-
-    public void setOrganisation(String organisation) {
-        this.organisation = organisation;
-    }
 
     public Long getId() {
         return id;
